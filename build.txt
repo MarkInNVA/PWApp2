@@ -1,0 +1,256 @@
+Sencha Cmd v4.0.3.74
+[INF] 
+[INF] init-plugin:
+[INF] 
+[INF] cmd-root-plugin.init-properties:
+[INF] 
+[INF] init-properties:
+[INF] 
+[INF] init-sencha-command:
+[INF] 
+[INF] init:
+[INF] 
+[INF] app-build-impl:
+[INF] 
+[INF] -before-init-local:
+[INF] 
+[INF] -init-local:
+[INF] 
+[INF] -after-init-local:
+[INF] 
+[INF] init-local:
+[INF] 
+[INF] find-cmd-in-path:
+[INF] 
+[INF] find-cmd-in-environment:
+[INF] 
+[INF] find-cmd-in-shell:
+[INF] 
+[INF] init-cmd:
+[INF]      [echo] Using Sencha Cmd from /Users/mreidy/bin/Sencha/Cmd/4.0.3.74 for /Library/WebServer/Documents/sencha/wksp_422/PWApp2/build.xml
+[INF] 
+[INF] -before-init:
+[INF] 
+[INF] -init:
+[INF] Initializing Sencha Cmd ant environment
+[INF] Adding antlib taskdef for com/sencha/command/compass/ant/antlib.xml
+[INF] 
+[INF] -after-init:
+[INF] 
+[INF] -before-init-defaults:
+[INF] 
+[INF] -init-defaults:
+[INF] 
+[INF] -after-init-defaults:
+[INF] 
+[INF] -init-compiler:
+[INF] 
+[INF] init:
+[INF] 
+[INF] -before-build:
+[INF] 
+[INF] refresh:
+[INF] 
+[INF] -before-refresh:
+[INF] 
+[INF] -init:
+[INF] 
+[INF] -init-compiler:
+[INF] 
+[INF] -detect-app-build-properties:
+[INF] Loading app json manifest...
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/ext/src
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/ext/packages/ext-theme-base/src
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/ext/packages/ext-theme-base/overrides
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/ext/packages/ext-theme-neutral/src
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/ext/packages/ext-theme-neutral/overrides
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/ext/packages/ext-theme-classic/src
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/ext/packages/ext-theme-classic/overrides
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/ext/packages/ext-theme-gray/src
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/ext/packages/ext-theme-gray/overrides
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/ux
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/PWApp2/app
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/PWApp2/app.js
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/build/temp/production/PWApp2/sencha-compiler/app
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/build/temp/production/PWApp2/sencha-compiler/app
+[INF] Concatenating output to file /Library/WebServer/Documents/sencha/wksp_422/build/temp/production/PWApp2/sencha-compiler/cmd-packages.js
+[INF] Adding external reference : @full-page => @overrides
+[INF] Loading classpath entry /Library/WebServer/Documents/sencha/wksp_422/build/temp/production/PWApp2/sencha-compiler/cmd-packages.js
+[INF] Adding external reference : Ext.util.Observable => /Library/WebServer/Documents/sencha/wksp_422/build/temp/production/PWApp2/sencha-compiler/cmd-packages.js
+[INF] 
+[INF] -refresh-app:
+[INF] Appending concatenated output to file /Library/WebServer/Documents/sencha/wksp_422/PWApp2/bootstrap.js
+[INF] Appending concatenated output to file /Library/WebServer/Documents/sencha/wksp_422/PWApp2/bootstrap.js
+[INF] Appending concatenated output to file /Library/WebServer/Documents/sencha/wksp_422/PWApp2/bootstrap.js
+[INF] Appending concatenated output to file /Library/WebServer/Documents/sencha/wksp_422/PWApp2/bootstrap.js
+[INF] Appending concatenated output to file /Library/WebServer/Documents/sencha/wksp_422/PWApp2/bootstrap.js
+[INF] Appending content to /Library/WebServer/Documents/sencha/wksp_422/PWApp2/bootstrap.js
+[INF] Appending content to /Library/WebServer/Documents/sencha/wksp_422/PWApp2/bootstrap.json
+[INF] 
+[INF] -refresh:
+[INF] 
+[INF] -after-refresh:
+[INF] 
+[INF] resolve:
+[INF] 
+[INF] js:
+[INF] 
+[INF] -before-js:
+[INF] 
+[INF] -init:
+[INF] 
+[INF] -init-compiler:
+[INF] 
+[INF] -detect-app-build-properties:
+[INF] 
+[INF] -compile-js:
+[INF] Loading classpath entry /Users/mreidy/bin/Sencha/Cmd/4.0.3.74/plugins/src
+[INF] Loading classpath entry /Users/mreidy/bin/Sencha/Cmd/4.0.3.74/plugins/ext/src
+[INF] Loading classpath entry /Users/mreidy/bin/Sencha/Cmd/4.0.3.74/plugins/ext/4.2/src
+[INF] Building optimized concatenated output..
+[INF] Compressing data with YuiJavascriptCompressor
+[INF] Concatenating output to file /Library/WebServer/Documents/sencha/wksp_422/build/production/PWApp2/app.js
+[INF] 
+[INF] -js:
+[INF] 
+[INF] -after-js:
+[INF] 
+[INF] resources:
+[INF] 
+[INF] -before-resources:
+[INF] 
+[INF] -before-inherit-resources:
+[INF] 
+[INF] -before-copy-resources:
+[INF] 
+[INF] -init:
+[INF] 
+[INF] -init-compiler:
+[INF] 
+[INF] -resources:
+[INF] merging resources into /Library/WebServer/Documents/sencha/wksp_422/build/production/PWApp2/resources
+[INF] merged 0 resources into /Library/WebServer/Documents/sencha/wksp_422/build/production/PWApp2/resources
+[INF] merging resources into /Library/WebServer/Documents/sencha/wksp_422/build/production/PWApp2
+[INF] merged 0 resources into /Library/WebServer/Documents/sencha/wksp_422/build/production/PWApp2
+[INF] 
+[INF] -after-copy-resources:
+[INF] 
+[INF] -after-inherit-resources:
+[INF] 
+[INF] -after-resources:
+[INF] 
+[INF] sass:
+[INF] 
+[INF] -before-sass:
+[INF] 
+[INF] -compass-compile-theme-package:
+[INF] 
+[INF] -init:
+[INF] 
+[INF] -init-compiler:
+[INF] 
+[INF] -compile-sass:
+[INF] writing sass content to /Library/WebServer/Documents/sencha/wksp_422/build/temp/production/PWApp2/sass/PWApp2-all.scss
+[INF] appending sass content to /Library/WebServer/Documents/sencha/wksp_422/build/temp/production/PWApp2/sass/PWApp2-all.scss
+[INF] appending sass content to /Library/WebServer/Documents/sencha/wksp_422/build/temp/production/PWApp2/sass/PWApp2-all.scss
+[INF] executing compass using system installed ruby runtime
+overwrite PWApp2-all.css 
+[INF]      [echo] Compressing /Library/WebServer/Documents/sencha/wksp_422/build/production/PWApp2/resources/PWApp2-all.css to /Library/WebServer/Documents/sencha/wksp_422/build/production/PWApp2/resources/PWApp2-all.css
+[INF] srcfile: /Library/WebServer/Documents/sencha/wksp_422/build/production/PWApp2/resources/PWApp2-all.css (552460 bytes)
+[INF] outfile: /Library/WebServer/Documents/sencha/wksp_422/build/production/PWApp2/resources/PWApp2-all.css
+[INF] Compressed size 209560 bytes. Saved 342900 bytes (62 %)
+[INF] 
+[INF] -compass-compile-theme-folders:
+[INF] 
+[INF] -compass-compile-sass-dir:
+[INF] 
+[INF] -compass-compile:
+[INF] 
+[INF] -sass:
+[INF] 
+[INF] -after-sass:
+[INF] 
+[INF] slice:
+[INF] 
+[INF] -before-slice:
+[INF] 
+[INF] -slice-images:
+[INF] 
+[INF] -init:
+[INF] 
+[INF] -init-compiler:
+[INF] 
+[INF] -detect-app-build-properties:
+[INF] 
+[INF] -slice-app-theme:
+[INF] 
+[INF] -init:
+[INF] 
+[INF] -init-compiler:
+[INF] 
+[INF] -compile-slicer-sass:
+[INF] writing sass content to /Library/WebServer/Documents/sencha/wksp_422/build/temp/production/PWApp2/slicer-temp/PWApp2-example.scss
+[INF] 
+[INF] -compass-compile-slicer-css:
+[INF] executing compass using system installed ruby runtime
+identical PWApp2-example.css 
+[INF] Appending concatenated output to file /Library/WebServer/Documents/sencha/wksp_422/PWApp2/sass/example/bootstrap.js
+[INF] Appending concatenated output to file /Library/WebServer/Documents/sencha/wksp_422/PWApp2/sass/example/bootstrap.js
+[INF] Appending concatenated output to file /Library/WebServer/Documents/sencha/wksp_422/PWApp2/sass/example/bootstrap.js
+[INF] Appending concatenated output to file /Library/WebServer/Documents/sencha/wksp_422/PWApp2/sass/example/bootstrap.js
+[INF] Appending concatenated output to file /Library/WebServer/Documents/sencha/wksp_422/PWApp2/sass/example/bootstrap.js
+[INF]      [echo] Capture theme image to /Library/WebServer/Documents/sencha/wksp_422/build/temp/production/PWApp2/slicer-temp/theme-capture.png
+[INF] Capturing theme image
+[INF] loading page /Library/WebServer/Documents/sencha/wksp_422/PWApp2/sass/example/theme.html
+2014-03-29 13:17:39.789 phantomjs[2853:507] CoreText performance note: Client called CTFontCreateWithName() using name "Times New Roman" and got font with PostScript name "TimesNewRomanPSMT". For best performance, only use PostScript names when calling this API.
+2014-03-29 13:17:39.790 phantomjs[2853:507] CoreText performance note: Set a breakpoint on CTFontLogSuboptimalRequest to debug.
+Capturing screenshot
+Saving slicer widget manifest
+Capture complete
+
+[INF] Capture complete
+[INF]      [echo] Slicing theme images to /Library/WebServer/Documents/sencha/wksp_422/build/production/PWApp2/resources
+[INF] Slicing images...
+[INF] Slicing complete - generated 241 images
+[INF] 
+[INF] -slice:
+[INF] 
+[INF] -after-slice:
+[INF] 
+[INF] page:
+[INF] 
+[INF] -before-page:
+[INF] 
+[INF] -init:
+[INF] 
+[INF] -init-compiler:
+[INF] 
+[INF] -copy-app-resources:
+[INF] 
+[INF] -generate-deltas:
+[INF] 
+[INF] -detect-app-build-properties:
+[INF] 
+[INF] -build-standalone-json-manifest:
+[INF] 
+[INF] -build-output-page:
+[INF] 
+[INF] -build-output-markup-page:
+[INF] Building output markup to /Library/WebServer/Documents/sencha/wksp_422/build/production/PWApp2/index.html
+[INF] 
+[INF] -generate-cache-manifest:
+[INF] 
+[INF] -page:
+[INF] 
+[INF] -after-page:
+[INF] 
+[INF] native-package:
+[INF] 
+[INF] -build:
+[INF] 
+[INF] -after-build:
+[INF] 
+[INF] build:
+[INF] 
+[INF] app-build:
+
