@@ -36,7 +36,9 @@ Ext.define('PWApp2.view.layout.MapView', {
 						anchorSize:75,
 						menu: [
 								{text: 'Topo' },
-								{text: 'Streets' },
+								{text: 'Streets' }, 
+								{text: 'Satellite'},
+								{text: 'Hybrid'},
 								{text: 'Ocean' },
 								{text: 'Nat Geo' }
 						]

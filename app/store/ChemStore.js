@@ -4,15 +4,6 @@ Ext.define('PWApp2.store.ChemStore', {
 
     fields: [ 'name', 'alias' ],
     data: [
-        // {name: 'Calcium', alias:'CALCIUM'  },
-        // {name: 'Chloride', alias:'CHLORIDE'  },
-        // {name: 'pH', alias:'pH' },
-        // {name: 'Potassium', alias:'POTASSIUM' },
-        // {name: 'TDS', alias:'TDS' },
-        // {name: 'Sodium', alias:'SODIUM' },
-        // {name: 'Sulfate', alias:'SULFATE' }
-        // above for testing with eerscmap map services
-         
         {name: 'ALK CaCO3', alias:'ALKCACO3'  },
         {name: 'Bromide', alias:'Br'  },
         {name: 'Calcium', alias:'Ca'  },

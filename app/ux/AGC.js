@@ -24,7 +24,7 @@ Ext.define('Ext.ux.AGC', {
 
     dyn_Well_Url  : "http://eerscmap.usgs.gov/arcgis/rest/services/pw/PW_20140401/MapServer",
     fL_Well_Url   : "http://eerscmap.usgs.gov/arcgis/rest/services/pw/PW_20140401/MapServer/0",
-    cache_Well_Url: "http://eerscmap.usgs.gov/arcgis/rest/services/pw/PW_20140401_cache/MapServer",
+//    cache_Well_Url: "http://eerscmap.usgs.gov/arcgis/rest/services/pw/PW_20140401_cache/MapServer",
 
     extentCount: null,
     totalCount: null,
@@ -195,16 +195,16 @@ Ext.define('Ext.ux.AGC', {
         visible: true
       } );
 
-      var tileLayer = new esri.layers.ArcGISTiledMapServiceLayer( me.getCache_Well_Url() ,{       
-        id: 'tiles',
-        "opacity": 0.0
-      });
+      // var tileLayer = new esri.layers.ArcGISTiledMapServiceLayer( me.getCache_Well_Url() ,{       
+      //   id: 'tiles',
+      //   "opacity": 0.0
+      // });
 
       var featureLayer = new esri.layers.FeatureLayer( me.getFL_Well_Url(), { 
           id: "wells",
           infoTemplate:template,
           mode: esri.layers.FeatureLayer.MODE_SELECTION,  // ONDEMAND    SNAPSHOT    SELECTION
-          outFields:["OBJECTID", "IDUSGS", "API", "LAT", "LONG_", "STATE", "WELLTYPE", "FORMATION", "GEOLAGE", "DEPTHUPPER", "DEPTHLOWER", "REFERENCE", "TDS", "TOC", "PH", "ALKCACO3", "Br", "Ca", "Cl", "K", "Na", "SO4", "dD", "d13C", "d18O"] 
+          outFields:["OBJECTID", "IDUSGS", "API", "LAT", "LONG_", "STATE", "WELLTYPE", "DATESAMPLE", "FORMATION", "GEOLAGE", "DEPTHUPPER", "DEPTHLOWER", "REFERENCE", "TDS", "TOC", "PH", "ALKCACO3", "Br", "Ca", "Cl", "K", "Na", "SO4", "dD", "d13C", "d18O"] 
       });      
 
       featureLayer.on("click", function(evt){
@@ -221,7 +221,7 @@ Ext.define('Ext.ux.AGC', {
       });
 
       map.addLayer(dynamicLayer);
-      map.addLayer(tileLayer);
+//      map.addLayer(tileLayer);
       map.addLayer(featureLayer);
       
 		}
@@ -272,7 +272,7 @@ Ext.define('Ext.ux.AGC', {
     // console.log('setMap :', theMap);
 
     var flayer = theMap.getLayer('wells');
-    var clayer = theMap.getLayer('tiles');
+ //   var clayer = theMap.getLayer('tiles');
     var dlayer = theMap.getLayer('dwells');
 
     dlayer.setVisibility(false);
@@ -281,7 +281,7 @@ Ext.define('Ext.ux.AGC', {
     var q  = new esri.tasks.Query();
 
     flayer.clear();
-    clayer.setVisibility(false);
+//    clayer.setVisibility(false);
 //    console.log('setMap 2');
     
     if (me.getCriteria() == '1=1') {
@@ -332,7 +332,7 @@ Ext.define('Ext.ux.AGC', {
     var me = this;
     var theMap = me.getArcMap();
     var flayer = theMap.getLayer('wells');
-    var clayer = theMap.getLayer('tiles');
+ //   var clayer = theMap.getLayer('tiles');
 
     var dlayer = theMap.getLayer('dwells');
 
@@ -353,7 +353,7 @@ Ext.define('Ext.ux.AGC', {
 
     flayer.clear();
 //    console.log('resetMap, after clear flayer :', flayer);
-    clayer.setVisibility(true);
+//    clayer.setVisibility(true);
 
     me.setMapType("Cache"); 
 

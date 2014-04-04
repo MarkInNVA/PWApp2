@@ -62,16 +62,22 @@ Ext.define('PWApp2.controller.MapController', {
 //        console.log('MapController : basemapSwitch');
         switch(e.text) {
             case 'Streets':
-                this.getAGC().getArcMap().setBasemap('streets')
+                this.getAGC().getArcMap().setBasemap('streets');
                 break;
             case 'Topo':
-                this.getAGC().getArcMap().setBasemap('topo')
+                this.getAGC().getArcMap().setBasemap('topo');
+                break;
+            case 'Satellite':
+                this.getAGC().getArcMap().setBasemap('satellite');
+                break;
+            case 'Hybrid':
+                this.getAGC().getArcMap().setBasemap('hybrid');
                 break;
             case 'Ocean':
-                this.getAGC().getArcMap().setBasemap('oceans')
+                this.getAGC().getArcMap().setBasemap('oceans');
                 break;
             case 'Nat Geo':
-                this.getAGC().getArcMap().setBasemap('national-geographic')
+                this.getAGC().getArcMap().setBasemap('national-geographic');
                 break;
         }
     },
