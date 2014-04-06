@@ -62,7 +62,7 @@ Ext.define('Ext.ux.AGC', {
 		this.callParent(arguments); 
 
 		function init() {
-
+      me.showBusy();
       var lods = [
 //        { "level":  0, "resolution": 156543.033928000,  "scale": 591657527.591555 }, 
 //        { "level":  1, "resolution": 78271.5169639999,  "scale": 295828763.795777 }, 
@@ -88,30 +88,31 @@ Ext.define('Ext.ux.AGC', {
           title: "Well",
           description:
           "<table border=2 width='100%' cellspacing='2' >" + 
+  
             "<tr><th colspan=5>Sample Information</th></tr>" + 
 
             "<tr><th width='21%'>Field</th><th width='29%'>Value</th><th></th><th width='24%'>Field</th><th width='26%'>Value</th></tr>" +
 
-            "<tr><td>ID USGS</td><td>{IDUSGS}</td>" +
-            "<td>|</td><td>Upper depth</td><td>{DEPTHUPPER:NumberFormat(digitSeparator:true, places:0)}</td></tr>" + 
+            "<tr><td class='right'>ID USGS</td><td class='right'>{IDUSGS}</td>" +
+            "<td class='right'></td><td class='right'>Upper depth</td><td class='right'>{DEPTHUPPER:NumberFormat(digitSeparator:true, places:0)}</td></tr>" + 
             
-            "<tr><td>API</td><td>{API}</td>" +
-            "<td>|</td><td>Lower depth</td><td>{DEPTHLOWER:NumberFormat(digitSeparator:true, places:0)}</td></tr>" + 
+            "<tr><td class='right'>API</td><td class='right'>{API}</td>" +
+            "<td class='right'></td><td class='right'>Lower depth</td><td class='right'>{DEPTHLOWER:NumberFormat(digitSeparator:true, places:0)}</td></tr>" + 
 
-            "<tr><td>Latitude</td><td>{LAT:NumberFormat(digitSeparator:true, places:2)}</td>" +
-            "<td>|</td><td>TDS</td><td>{TDS:NumberFormat(digitSeparator:true, places:0)}</td></tr>" +
+            "<tr><td class='right'>Latitude</td><td class='right'>{LAT:NumberFormat(digitSeparator:true, places:2)}</td>" +
+            "<td class='right'></td><td class='right'>TDS</td><td class='right'>{TDS:NumberFormat(digitSeparator:true, places:0)}</td></tr>" +
             
-            "<tr><td>Longitude</td><td>{LONG_:NumberFormat(digitSeparator:true, places:2)}</td>" +
-            "<td>|</td><td>Sodium</td><td>{Na:NumberFormat(digitSeparator:true, places:0)}</td></tr>" +
+            "<tr><td class='right'>Longitude</td><td class='right'>{LONG_:NumberFormat(digitSeparator:true, places:2)}</td>" +
+            "<td class='right'></td><td class='right'>Sodium</td><td class='right'>{Na:NumberFormat(digitSeparator:true, places:0)}</td></tr>" +
 
-            "<tr><tr><td>Formation</td><td>{FORMATION}</td>" +
-            "<td>|</td><td>Calcium</td><td>{Ca:NumberFormat(digitSeparator:true, places:0)}</td></tr>"+
+            "<tr><td class='right'>Formation</td><td class='right'>{FORMATION}</td>" +
+            "<td class='right'></td><td class='right'>Calcium</td><td class='right'>{Ca:NumberFormat(digitSeparator:true, places:0)}</td></tr>"+
             
-            "<tr><td>Geologic Age</td><td>{GEOLAGE}</td>" +
-            "<td>|</td><td>Chloride</td><td>{Cl:NumberFormat(digitSeparator:true, places:0)}</td></tr>" +
+            "<tr><td class='right'>Geologic Age</td><td class='right'>{GEOLAGE}</td>" +
+            "<td class='right'></td><td class='right'>Chloride</td><td class='right'>{Cl:NumberFormat(digitSeparator:true, places:0)}</td></tr>" +
 
-            "<tr><td>Sample date</td><td>{DATESAMPLE:DateFormat(selector: 'date', fullYear: true)}</td>" +
-            "<td>|</td><td>TOC</td><td>{TOC:NumberFormat(digitSeparator:true, places:0)}</td></tr>" +
+            "<tr><td class='right'>Sample date</td><td class='right'>{DATESAMPLE:DateFormat(selector: 'date', fullYear: true)}</td>" +
+            "<td class='right'></td><td class='right'>TOC</td><td class='right'>{TOC:NumberFormat(digitSeparator:true, places:0)}</td></tr>" +
 
           "</table>"
       });
@@ -161,15 +162,21 @@ Ext.define('Ext.ux.AGC', {
           scalebarUnit: "dual"
         });
 
-        Ext.ComponentQuery.query('[xtype=layout.legendview]')[0].show();
+        var mask = Ext.get('loading-mask'),
+        parent = Ext.get('loading-parent');
+
+        Ext.fly(mask).fadeOut({ duration:   1000, remove: true });
+        Ext.fly(parent).fadeOut({ duration: 1050, remove: true });  
 
       });
 
       map.on("layer-add-result", function (evt) {
         
         if (evt.layer.id == 'wells') {
-            me.processExtentOrCriteriaChange('1=1', 'map-add');
+          me.processExtentOrCriteriaChange('1=1', 'map-add');
+          Ext.ComponentQuery.query('[xtype=layout.legendview]')[0].show();
         }
+
       });
 
       map.on("extent-change", function(e){
@@ -195,11 +202,6 @@ Ext.define('Ext.ux.AGC', {
         visible: true
       } );
 
-      // var tileLayer = new esri.layers.ArcGISTiledMapServiceLayer( me.getCache_Well_Url() ,{       
-      //   id: 'tiles',
-      //   "opacity": 0.0
-      // });
-
       var featureLayer = new esri.layers.FeatureLayer( me.getFL_Well_Url(), { 
           id: "wells",
           infoTemplate:template,
@@ -213,10 +215,7 @@ Ext.define('Ext.ux.AGC', {
       });
 
       dynamicLayer.on("update-end", function() {
-//        if (me.getNotFirstTime() == null) {
-            me.showNotBusy();
-  //        me.setNotFirstTime(true);
- //         console.log('dynamicLayer.on - show not busy');
+        me.showNotBusy();
       //  }
       });
 
@@ -226,40 +225,7 @@ Ext.define('Ext.ux.AGC', {
       
 		}
 
-
-    Ext.Msg.show({
-      autoScroll: true,
-      title: 'USGS Provisional Database Disclaimer',
-      msg: 'You are aware of these limitations to data use and data quality.'  ,
-      buttons: Ext.MessageBox.YESNO,
-      defaultFocus:2,
-      style: { 'z-index':20050},
-      width:90,
-      height: 90,
-      top:50,
-      modal:false,
- //     renderTo:'findme',
-      closable: false,
-      // x:50,
-      // y:550,
-      fn: function(btn, o) {
-
-//        console.log('btn: ', btn, ', o: ',o);
-        if (btn == 'yes') { 
-          // Destroy the masks
-          var mask = Ext.get('loading-mask'),
-          parent = Ext.get('loading-parent');
-
-          Ext.fly(mask).fadeOut({ duration:   1000, remove: true });
-          Ext.fly(parent).fadeOut({ duration: 1050, remove: true });
-
-          me.showBusy();
-//          console.log('afterRender (before init) - show busy');
-          dojo.ready(init);
-        }
-      }
-    });
-
+    dojo.ready(init);
 
 	},
 
@@ -356,12 +322,6 @@ Ext.define('Ext.ux.AGC', {
 //    clayer.setVisibility(true);
 
     me.setMapType("Cache"); 
-
-//     if (me.getNotFirstTime()) {
-//        me.showNotBusy();
-// // //      console.log('not first time');
-//     }
-
 
     // console.log('resetMap about to fire countUpdate');   
 

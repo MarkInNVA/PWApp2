@@ -130,7 +130,8 @@ Ext.define('PWApp2.controller.RecordController', {
 		this.setMyCriteria(crit);
 		this.setMyExtent(extent);
 
-		var message='';
+		var message='', preMessage = 'INACTIVE: ';
+
 		//    console.log('updateCount :', tc, ', ec :', ec, 'critInExtCnt :', critInExtCnt, ', crit :', crit );
 	  	var dl = this.getDownloadButton(); 
 	  	var exp = this.getExpandButton(); 
@@ -144,6 +145,7 @@ Ext.define('PWApp2.controller.RecordController', {
 		  	if (ec < 1000) {
 		  		if (ec > 0) {
 			  		dl.setDisabled(false);
+			  		preMessage = 'ACTIVE: ';
 		  		} else {
 		  			dl.setDisabled(true);
 		  		}
@@ -171,6 +173,7 @@ Ext.define('PWApp2.controller.RecordController', {
 	  		if(critInExtCnt < 1000) {
 	  			if (critInExtCnt > 0) {
 		  			dl.setDisabled(false);
+			  		preMessage = 'ACTIVE: ';
 	  			} else {
 	  				dl.setDisabled(true);
   				}
@@ -186,7 +189,7 @@ Ext.define('PWApp2.controller.RecordController', {
 
 	  		}
 		}
-			this.getRecordView().setTitle(message); 
+			this.getRecordView().setTitle( preMessage + message); 
 		  
 		//    console.log('RV :' , this.getView('RecordView')[0]); // this.getRecordView());
 	}

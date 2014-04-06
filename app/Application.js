@@ -17,7 +17,7 @@ Ext.define('PWApp2.Application', {
 
     controllers: [  
         'MapController',
-        'ScoreCardController',
+        // 'ScoreCardController',
         'RecordController',
         'HelpController',
         'FilterController',

@@ -18,40 +18,27 @@
   padding-top: 75px;
   color: white;
   background-image:url("../images/paper.gif")
-
 }
-/*#findme {
-  position: absolute;
-  left: 45%;
-  top: 500px;   
-  padding-top: 5px;
-  color: black;
 
-} */
 #blabla {
-/* //  position: absolute; */
-/*  left: 35%;  */
   padding-top: 225px;
   color: black;
 
 } 
+
 #Must {
-/*  position: absolute;
-  left: 35%;
-  top: 100px;   
-*/
-    font-family: Lucida Sans,Lucida Grande,Arial !important;
-    font-size: 14px !important;
+  font-family: Lucida Sans,Lucida Grande,Arial !important;
+  font-size: 14px !important;
   padding-top: 40px;
   color: black;
-
 }
-/*#theDiv {
-  'z-index': 1500;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  height: 300px;
-  width:300px;
 
-}*/
+.right {
+  text-align: right;
+  margin-right: 1em;
+}
+
+.left {
+  text-align: left;
+  margin-left: 1em;
+}
