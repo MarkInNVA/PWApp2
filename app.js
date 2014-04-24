@@ -16,17 +16,18 @@ Ext.require('Ext.Msg');
 Ext.onReady(function(){
 //     Ext.MessageBox.wait("Loading...", 'Please Wait'); 
 //    console.log('body: ', Ext.getBody());
-//layout: 'fit',
-    Ext.Msg.show({
+
+    var v = Ext.Msg.show({
         autoScroll: true,
         title: 'USGS Provisional Database Disclaimer',
         msg: 'You are aware of these limitations to data use and data quality.'  ,
         buttons: Ext.MessageBox.YESNO,
         defaultFocus:2,
-        style: { 'z-index':2050},
-        width:90,
-        height: 90,
-        top:50,
+  //      layout: 'absolute',
+        style: { 'z-index':2050, align:'left'},
+        // width:70,
+        // height: 80,
+
         modal:false,
         closable: false,
         renderTo: Ext.getBody(),
@@ -47,5 +48,8 @@ Ext.onReady(function(){
             }
         }
     });
+    //var v. = Ext.get('disc');
+//    console.log('d: ', v)
+    v.setY(380);
 
 });

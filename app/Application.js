@@ -6,7 +6,7 @@ Ext.define('PWApp2.Application', {
     views: [         
         'layout.MapView',          
         'layout.RecordView',
-        'layout.ScoreCardView',
+//        'layout.ScoreCardView',
         'layout.HelpView',
         'filter.View',
         'filter.ChemLineView',

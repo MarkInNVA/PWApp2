@@ -60,7 +60,7 @@ unset($workArray);
 $workArray = array();
 $workArray[] = 'Where clause:';
 $workArray[] = $lSpacer;
-$workArray[] = $urlWhere;
+$workArray[] = $_GET["criteria"];
 fputcsv($output, $workArray);
 unset($workArray);
 
